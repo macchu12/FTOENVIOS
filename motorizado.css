@@ -1,6 +1,13 @@
 
 body { margin:0; font-family:'Albert Sans',sans-serif; background:#fff; color:#003087; }
-.container { padding-bottom:80px; }
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 .header { display:flex; align-items:center; justify-content:center; padding:1rem 0; position:relative; }
 .back img { width:24px; }
 .logo { font-size:2rem; font-weight:bold; }
