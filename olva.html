@@ -1,70 +1,66 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FTO - Olva Courier</title>
-  <link rel="stylesheet" href="olva.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FTO Envíos - Olva Courier</title>
+  <link rel="stylesheet" href="olva.css">
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1>Olva Courier</h1>
+    <header class="header">
+      <a href="index.html" class="back"><img src="icons/back-icon.svg" alt="Volver"></a>
+      <div class="logo">FTO</div>
+      <div class="envio-type"><img src="icons/olva-icon.svg" alt="Olva Courier"><span>Olva courier</span></div>
+    </header>
 
-    <div id="step1" class="step">
-      <h2>¿Cómo deseas recibir tu pedido?</h2>
-      <button onclick="seleccionarMetodo('domicilio')">🏠 A domicilio</button>
-      <button onclick="seleccionarMetodo('agencia')">🏢 Recojo en agencia</button>
+    <div class="stepper">
+      <div class="step active"></div><div class="line"></div>
+      <div class="step"></div><div class="line"></div>
+      <div class="step"></div><div class="line"></div>
+      <div class="step"></div>
     </div>
 
-    <div id="step2" class="step" style="display:none;">
-      <h2>Selecciona tu destino</h2>
-      <select id="departamento"><option value="">Departamento</option></select>
-      <select id="provincia" disabled><option value="">Provincia</option></select>
-      <select id="distrito" disabled><option value="">Distrito</option></select>
-      <button onclick="continuarADatos()">Siguiente</button>
-    </div>
-
-    <div id="step3" class="step" style="display:none;">
-      <h2>Datos del destinatario</h2>
-      <input type="text" id="dni" placeholder="DNI">
-      <input type="text" id="nombres" placeholder="Nombres">
-      <input type="text" id="apellido_paterno" placeholder="Apellido paterno">
-      <input type="text" id="apellido_materno" placeholder="Apellido materno">
-      <input type="text" id="celular" placeholder="Celular">
-      <div id="campos_direccion" style="display:none;">
-        <input type="text" id="direccion" placeholder="Dirección exacta">
-        <input type="text" id="referencia" placeholder="Referencia">
+    <section class="form-section" id="paso-1">
+      <h2>Tipo de entrega</h2>
+      <div class="opciones-entrega">
+        <label class="opcion">
+          <input type="radio" name="entrega" value="domicilio">
+          <span>📍 A domicilio</span>
+        </label>
+        <label class="opcion">
+          <input type="radio" name="entrega" value="agencia">
+          <span>🏢 Agencia</span>
+        </label>
       </div>
-      <div id="agencia_opcion" style="display:none;">
-        <select id="agencia">
-          <option value="">Selecciona una agencia</option>
-          <option value="Agencia Central">Agencia Central</option>
-          <option value="Agencia Norte">Agencia Norte</option>
-        </select>
-      </div>
-      <button onclick="mostrarResumen()">Ir al resumen</button>
-    </div>
+      <button class="btn-next" onclick="avanzarPaso()">Siguiente</button>
+    </section>
 
-    <div id="step4" class="step" style="display:none;">
-      <h2>Resumen de Pago</h2>
-      <p id="resumen_envio"></p>
-      <p>Subtotal: <span id="subtotal"></span></p>
-      <p>IGV (18%): <span id="igv"></span></p>
-      <p><strong>Total a pagar: <span id="total"></span></strong></p>
-      <h3>Elige un método de pago</h3>
-      <button>📱 Pagar con Yape</button>
-      <button>📲 Pagar con Plin</button>
-      <input type="text" placeholder="Código de operación">
-      <button onclick="finalizarPago()">Finalizar</button>
-    </div>
+    <section class="form-section" id="paso-2" style="display:none;">
+      <h2>Selecciona destino</h2>
+      <select id="departamento">
+        <option value="">Departamento</option>
+        <option value="LIMA">LIMA</option>
+        <option value="AREQUIPA">AREQUIPA</option>
+      </select>
+      <select id="provincia" disabled>
+        <option value="">Provincia</option>
+      </select>
+      <select id="distrito" disabled>
+        <option value="">Distrito</option>
+      </select>
+      <button class="btn-next">Siguiente</button>
+    </section>
 
-    <div id="mensajeFinal" style="display:none;">
-      <h3>✅ ¡Envío registrado correctamente!</h3>
-    </div>
-  </div>
-  <script src="olva.js"></script>
+    <nav class="bottom-nav">
+      <a class="active"><img src="icons/home-icon.svg" alt="Inicio"><span>Inicio</span></a>
+      <a><img src="icons/shop-icon.svg" alt="Tienda"><span>Tienda</span></a>
+      <a><img src="icons/offers-icon.svg" alt="Ofertas"><span>Ofertas</span></a>
+      <a><img src="icons/contact-icon.svg" alt="Contacto"><span>Contacto</span></a>
+    </nav>
+
+<script src="olva.js"></script>
 </body>
 </html>
