@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shalom Courier</title>
+  <link rel="stylesheet" href="shalom.css">
+  <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-container">
+    <header class="header">
+      <a href="index.html" class="back">⬅️</a>
+      <div class="logo-box">
+        <span class="logo">FTO</span>
+      </div>
+    </header>
+
+    <section class="stepper">
+      <span class="step done">✔️</span>
+      <span class="line"></span>
+      <span class="step done">✔️</span>
+      <span class="line"></span>
+      <span class="step active"></span>
+      <span class="line"></span>
+      <span class="step"></span>
+    </section>
+
+    <section class="formulario">
+      <h2>Selecciona tu sede</h2>
+      <select id="departamento"><option value="">Departamento</option></select>
+      <select id="provincia" disabled><option value="">Provincia</option></select>
+      <select id="distrito" disabled><option value="">Distrito</option></select>
+      <select id="sede" disabled><option value="">Sede</option></select>
+    </section>
+
+    <nav class="bottom-nav">
+      <a class="active">🏠<span>Home</span></a>
+      <a>🛒<span>Shop</span></a>
+      <a>🔍<span>Ofertas</span></a>
+      <a>👤<span>Contacto</span></a>
+    </nav>
+  </div>
+  <script src="shalom.js"></script>
+</body>
+</html>

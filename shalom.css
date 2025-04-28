@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: 'Albert Sans', sans-serif;
+  background-color: #fff;
+  color: #003087;
+}
+.main-container {
+  padding-bottom: 80px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  position: relative;
+}
+.back {
+  position: absolute;
+  left: 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.logo-box .logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.step {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #003087;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+.step.done {
+  background: #003087;
+  color: white;
+}
+.step.active {
+  background: white;
+  border: 2px solid #003087;
+}
+.line {
+  width: 40px;
+  height: 2px;
+  background: #003087;
+}
+.formulario {
+  padding: 1rem;
+}
+.formulario h2 {
+  margin-top: 0;
+}
+select {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-top: 1px solid #ccc;
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0;
+  z-index: 1000;
+}
+.bottom-nav a {
+  font-size: 0.8rem;
+  text-align: center;
+  color: #003087;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+.bottom-nav a.active {
+  color: #003087;
+}

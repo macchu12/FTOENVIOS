@@ -1,0 +1,23 @@
+
+body { margin:0; font-family:'Albert Sans',sans-serif; background:#fff; color:#003087; }
+.container { padding-bottom:80px; }
+.header { display:flex; align-items:center; justify-content:center; padding:1rem 0; position:relative; }
+.back img { width:24px; }
+.logo { font-size:2rem; font-weight:bold; }
+.envio-type { position:absolute; right:1rem; display:flex; align-items:center; gap:0.5rem; }
+.envio-type img { width:24px; }
+.stepper { display:flex; align-items:center; justify-content:center; margin:1rem 0; }
+.step { width:24px; height:24px; border:2px solid #003087; border-radius:50%; display:flex; align-items:center; justify-content:center; background:white; transition:all 0.3s ease; }
+.step.done { background:#003087; color:white; transform:scale(1.1); }
+.step.active { background:white; box-shadow:0 0 6px rgba(0,48,135,0.4); }
+.line { width:40px; height:2px; background:#003087; }
+.form-section { padding:1rem; }
+.form-section h2 { margin-top:0; }
+input { width:100%; padding:0.8rem; margin:0.5rem 0; border:1px solid #ccc; border-radius:8px; }
+.nota { font-size:0.8rem; color:#003087; margin-top:0.5rem; }
+.btn-next { background:#003087; color:white; border:none; padding:0.8rem 1.5rem; border-radius:8px; margin-top:1rem; width:100%; font-weight:bold; cursor:pointer; transition:background 0.3s ease; }
+.btn-next:hover { background:#002060; }
+.bottom-nav { position:fixed; bottom:0; left:0; width:100%; background:white; border-top:1px solid #ccc; display:flex; justify-content:space-around; padding:0.5rem 0; z-index:1000; }
+.bottom-nav a { font-size:0.8rem; text-align:center; color:#003087; display:flex; flex-direction:column; font-weight:bold; transition:color 0.3s ease, transform 0.3s ease; }
+.bottom-nav a:hover { transform:scale(1.1); }
+.bottom-nav a.active { color:#003087; }
